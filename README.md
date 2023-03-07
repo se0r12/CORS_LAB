@@ -12,3 +12,5 @@ origin情報を元に、`Access-Control-Allow-Origin`を生成。
 `http://localhost:3000`は、`Access-Control-Allow-Origin`を、`request header`の`Origin`から生成をしていて、`Access-Controll-Allow-Credentials`が`true`になってしまっている。
 
 `credentials: username: user, password: user`
+
+`http://localhost:3000/lab1/secret`の内容を取得できれば勝利

